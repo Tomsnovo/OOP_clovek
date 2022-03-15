@@ -6,21 +6,30 @@ namespace OOP_clovek
 {
     public class Clovek
     {
+        private int Skill;
+        private int Stamina; 
+
         public string name { get; }
         public string surname { get; }
         public DateTime birth { get; }
-        int stamina { get; set; }
-        int health { get; set; }
-        int skill { get; set; }
+        public int stamina { get => Stamina;  }
+        public int health { get; set; }
+        public int skill { get => Skill; }
        
         public Clovek(string name, string surname, DateTime birth, int stamina, int health, int skill)
         {
-            this.name = name;
-            this.surname = surname;
-            this.birth = birth;
-            this.stamina = stamina;
-            this.health = health;
-            this.skill = skill;
+            name = "";
+            surname = "";
+            birth = DateTime.Now;
+            stamina = 100;
+            health = 100;
+            skill = 0;
+        }
+
+        public void levelUp()
+        {
+            Skill += 20;
+            Stamina += 10;
         }
 
      
