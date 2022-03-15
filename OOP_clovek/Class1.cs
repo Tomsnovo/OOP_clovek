@@ -9,21 +9,30 @@ namespace OOP_clovek
         private int Skill;
         private int Stamina; 
 
-        public string name { get; }
+        public string name { get; set; }
         public string surname { get; }
         public DateTime birth { get; }
         public int stamina { get => Stamina;  }
         public int health { get; set; }
         public int skill { get => Skill; }
        
-        public Clovek(string name, string surname, DateTime birth, int stamina, int health, int skill)
+        public Clovek()
         {
             name = "";
             surname = "";
             birth = DateTime.Now;
-            stamina = 100;
+            Stamina = 100;
             health = 100;
-            skill = 0;
+            Skill = 0;
+        }
+        public void Aging()
+        {
+            Stamina -= 10;
+            if(Stamina < 0)
+            {
+                Stamina = 0;
+            }
+            health += 2;
         }
 
         public void levelUp()

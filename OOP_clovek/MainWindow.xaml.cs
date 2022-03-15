@@ -20,10 +20,36 @@ namespace OOP_clovek
     /// </summary>
     public partial class MainWindow : Window
     {
+        Clovek karel;
+        Clovek jan;
+        
         public MainWindow()
         {
             InitializeComponent();
+            karel = new Clovek();
+            karel.name = "Karel";
+            show(karel, txtbox1);
+
+            jan = new Clovek();
+            jan.name = "Jan";
+            show(jan, txtbox2);
+        }
+        public void show(Clovek clovek, TextBox textBox)
+        {
+            textBox.Text = clovek.surname + " " + clovek.name;
+            textBox.Text += "\n" + "health: " + clovek.health;
+            textBox.Text += "\n" + "stamina: " + clovek.stamina;
+            textBox.Text += "\n" + "skill: " + clovek.skill;
+            textBox.Text += "\n" + "birth: " + clovek.birth;
+
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            karel.Aging();
+            jan.Aging();
+            show(karel, txtbox1);
+            show(jan, txtbox2);
+        }
     }
 }
