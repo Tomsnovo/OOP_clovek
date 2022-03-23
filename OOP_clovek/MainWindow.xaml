@@ -10,6 +10,7 @@
         <TextBox Name ="txtbox1"  HorizontalAlignment="Left" Height="414" Margin="10,0,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="300"/>
         <TextBox Name ="txtbox2"  HorizontalAlignment="Left" Height="414" Margin="489,0,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Center" Width="300"/>
         <Button Content="Attack" HorizontalAlignment="Center" Height="55" Margin="0,31,0,0" VerticalAlignment="Top" Width="136" Click="Button_Click"/>
-
+víc buttonu dej tam more
+            
     </Grid>
 </Window>
